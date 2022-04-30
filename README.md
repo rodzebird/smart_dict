@@ -3,7 +3,7 @@
 ## 🔭 Overview
 
 The SmartDict library provides an override for Python dict system type.  
-Along with dict features, SmartDict has a powerful [key syntax](#🔣-key-syntax).
+Along with dict features, SmartDict has a powerful [key syntax](#-key-syntax).
 
 ## 🩺 Dependencies
 
@@ -11,13 +11,13 @@ Along with dict features, SmartDict has a powerful [key syntax](#🔣-key-syntax
 
 ## 🔗 Quick links
 
-- 🛠 [How to use](#🛠-how-to-use)
-  - ⭐ [Initialize](#⭐-initialize)
-  - ⭐ [Base class](#⭐-as-a-base-class)
-  - ⭐ [Optional parameters](#⭐-optional-parameters)
-  - ⭐ [Get keys](#⭐-how-to-get-keys)
-  - ⭐ [Set keys](#⭐-how-to-set-keys)
-  - ⭐ [Reset dictionary](#⭐-how-to-reset-the-dictionary)
+- 🛠 [How to use](#-how-to-use)
+  - ⭐ [Initialize](#-initialize)
+  - ⭐ [Base class](#-as-a-base-class)
+  - ⭐ [Optional parameters](#-optional-parameters)
+  - ⭐ [Get keys](#-how-to-get-keys)
+  - ⭐ [Set keys](#-how-to-set-keys)
+  - ⭐ [Reset dictionary](#-how-to-reset-the-dictionary)
 - 🔣 [Key syntax](#-key-syntax)
 
 ## 🛠 How to use
@@ -52,11 +52,11 @@ Setting an option at initialization dictates the behavior **for all operations**
 
 #### ➜ Nested key delimiter (`nested_delimiter`, default → `:`)
 
-Set the delimiter for nested keys, used in the [key syntax](#🔣-key-syntax).
+Set the delimiter for nested keys, used in the [key syntax](#-key-syntax).
 
 #### ➜ Same-level key delimiter (`same_level_delimiter`, default → `/`)
 
-Set the delimiter for same-level keys, used in the [key syntax](#🔣-key-syntax).
+Set the delimiter for same-level keys, used in the [key syntax](#-key-syntax).
 
 #### ➜ Toggle raise on key error (`raise_none`, default → `True`)
 
@@ -102,7 +102,7 @@ value = sm('unknown_key', raise_none=False)
 
 #### ➜ Using `__getitem__`
 
-⚠ WARNING — When using `__getitem__`, you **cannot** pass optional parameters ; but you can use the [key syntax](#🔣-key-syntax) ☝
+⚠ WARNING — When using `__getitem__`, you **cannot** pass optional parameters ; but you can use the [key syntax](#-key-syntax) ☝
 
 ```python
 sm = SmartDict(some_dict)
@@ -125,7 +125,7 @@ sm.set('object_reference', object_reference, copy=False)
 
 #### ➜ Using `__setitem__`
 
-⚠ WARNING — When using `__setitem__`, you **cannot** pass optional parameters ; but you can use the [key syntax](#🔣-key-syntax) ☝
+⚠ WARNING — When using `__setitem__`, you **cannot** pass optional parameters ; but you can use the [key syntax](#-key-syntax) ☝
 
 ```python
 sm = SmartDict(some_dict)
@@ -136,7 +136,7 @@ sm['object_reference'] = object_reference
 
 ### ⭐ How to reset the dictionary
 
-The `reset()` method is used to pass a new dictionary to the instance, which is not doable with the [set() method](#➜-using-set) since doing a `SmartDict.set('', new_object)` will set the empty key `''` to `new_object`.
+The `reset()` method is used to pass a new dictionary to the instance, which is not doable with the [set() method](#-using-set) since doing a `SmartDict.set('', new_object)` will set the empty key `''` to `new_object`.
 
 ```python
 sm = SmartDict(some_dict)
@@ -165,7 +165,7 @@ value = sm.get('key')
 Nested keys represent iterables inside other iterables.  
 The equivalent in Python is using iterable brackets.
 
-The SmartDict key syntax uses a delimiter [`nested_delimiter`](#➜-nested-key-delimiter-nested_delimiter-default-→-) defaulting to `:` and overridable.
+The SmartDict key syntax uses a delimiter [`nested_delimiter`](#-nested-key-delimiter-nested_delimiter-default--) defaulting to `:` and overridable.
 
 ```python
 sm = SmartDict(some_dict)
@@ -185,7 +185,7 @@ value = dictionary['nested']['key']
 Same-level keys are a list of keys for the same iterable.  
 The equivalent in Python is multiple statements to get the iterable keys.
 
-The SmartDict key syntax uses a delimiter [`same_level_delimiter`](#➜-same-level-key-delimiter-same_level_delimiter-default-→-) defaulting to `/` and overridable.
+The SmartDict key syntax uses a delimiter [`same_level_delimiter`](#-same-level-key-delimiter-same_level_delimiter-default--) defaulting to `/` and overridable.
 
 ```python
 sm = SmartDict(some_dict)
@@ -197,7 +197,7 @@ first = sm.get('first')
 second = sm.get('second')
 ```
 
-💡 It is particularly useful when combined with [nested keys](#👉-nested-same-level-keys).
+💡 It is particularly useful when combined with [nested keys](#-nested-same-level-keys).
 
 ### 👉 Array key
 
@@ -281,7 +281,7 @@ dictionary[''] = 'value'
 
 ### 👉 Nested same-level keys
 
-[Nested](#👉-nested-key), [same-level](#👉-same-level-keys), [array](#👉-array-key) and [empty](#👉-empty-key) key syntaxes can be combined to use the full power of the key syntax.
+[Nested](#-nested-key), [same-level](#-same-level-keys), [array](#-array-key) and [empty](#-empty-key) key syntaxes can be combined to use the full power of the key syntax.
 
 ```python
 sm = SmartDict(some_dict)
@@ -294,7 +294,7 @@ odd_array = sm.get('nested:list:1/3/5/7/9')
 
 ### 👉 With different delimiters
 
-As [stated above](#⭐-optional-parameters), delimiters can be set at initialization and overriden at get/set for oneshot usage.
+As [stated above](#-optional-parameters), delimiters can be set at initialization and overriden at get/set for oneshot usage.
 
 💡 Oneshot usage means that the optional parameters passed at get/set won't be remembered by SmartDict after **one use**.
 
