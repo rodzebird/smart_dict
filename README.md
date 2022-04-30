@@ -18,7 +18,7 @@ Along with dict features, SmartDict has a powerful [key syntax](#🔣-key-syntax
   - ⭐ [Get keys](#⭐-how-to-get-keys)
   - ⭐ [Set keys](#⭐-how-to-set-keys)
   - ⭐ [Reset dictionary](#⭐-how-to-reset-the-dictionary)
-- 🔣 [Key syntax](#🔣-key-syntax)
+- 🔣 [Key syntax](#-key-syntax)
 
 ## 🛠 How to use
 
